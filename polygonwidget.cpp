@@ -18,10 +18,10 @@ void PolygonWidget::addPolygon(const Polygon &poly)
     update();
 }
 
-void PolygonWidget::addTriangle(QPointF a, QPointF b, QPointF c, QColor color)
+void PolygonWidget::addTriangle(QPointF a, QPointF b, QPointF c, QPointF d,QColor color)
 {
     Polygon p;
-    p.points << a << b << c;
+    p.points << a << b << c << d;
     p.fillColor = color;
     addPolygon(p);
 }

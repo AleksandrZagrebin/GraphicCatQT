@@ -22,7 +22,7 @@ public:
     explicit PolygonWidget(QWidget *parent = nullptr);
 
     void addPolygon(const Polygon &poly);
-    void addTriangle(QPointF a, QPointF b, QPointF c, QColor color);
+    void addTriangle(QPointF a, QPointF b, QPointF c,QPointF d, QColor color);
     void clear();
 
 protected:

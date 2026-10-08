@@ -7,13 +7,13 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cat.cpp \
     main.cpp \
-    mainwindow.cpp \
-    polygonwidget.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
-    polygonwidget.h
+    cat.h \
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
