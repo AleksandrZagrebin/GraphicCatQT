@@ -52,6 +52,19 @@ void Cat::drawPair(QPainter &painter, int p1, int p2, int p3, int p4, const QCol
     painter.drawPolygon(pol2);
 }
 
+void Cat::drawPair(QPainter &painter, int p1, int p2, int p3, int p4, int p5, int p6, int p7, const QColor &color)
+{
+    painter.setBrush(color);
+    painter.setPen(Qt::black);
+
+    QPolygon pol1, pol2;
+    pol1 << points1[p1] << points1[p2] << points1[p3] << points1[p4] <<points1[p5]<< points1[p6]<< points1[p7] ;
+    pol2 << points2[p1] << points2[p2] << points2[p3] << points2[p4]<< points2[p5]<< points2[p6]<< points2[p7];
+
+    painter.drawPolygon(pol1);
+    painter.drawPolygon(pol2);
+}
+
 void Cat::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
@@ -68,4 +81,17 @@ void Cat::paintEvent(QPaintEvent *event)
 
     drawPair(painter, 4,  3,  2, 14, Qt::white);
     drawPair(painter, 6,  5,  8, 7, Qt::white);
+
+    drawPair(painter, 13, 4, 14, 2, 10, 11, 12, Qt::white);
+    drawPair(painter,  8, 9, 10, 11, 12, 13, 5, Qt::white);
+
+    QPolygon pol1, pol2, pol3;
+    pol1 << points1[0]<< points1[1]<< points1[2]<< points1[3]<< points1[4]<< points1[5]
+         << points2[5]<< points2[4]<< points2[3]<< points2[2]<< points2[1]<< points2[0];
+    pol2 << points2[7] << points1[7]<< points1[6];
+    pol3 << points2[5]<< points1[7]<< points1[6];
+    painter.drawPolygon(pol1);
+    painter.drawPolygon(pol2);
+    painter.drawPolygon(pol3);
+
 }
