@@ -73,17 +73,17 @@ void Cat::paintEvent(QPaintEvent *event)
     painter.setRenderHint(QPainter::Antialiasing, true);
     painter.translate(width() / 2, height() / 2);
 
-    drawPair(painter, 0,  1, 16, Qt::white);
-    drawPair(painter, 1, 15, 16, Qt::white);
-    drawPair(painter, 1, 15,  2, Qt::white);
-    drawPair(painter, 2, 15, 10, Qt::white);
+    drawPair(painter, 0,  1, 16, QColor(255, 140, 0));
+    drawPair(painter, 1, 15, 16, QColor(255, 140, 100));
+    drawPair(painter, 1, 15,  2, QColor(150, 150, 150));
+    drawPair(painter, 2, 15, 10, QColor(130, 130, 130));
     drawPair(painter, 7,  8,  9, Qt::white);
 
-    drawPair(painter, 4,  3,  2, 14, Qt::white);
-    drawPair(painter, 6,  5,  8, 7, Qt::white);
+    drawPair(painter, 4,  3,  2, 14, QColor(100, 180, 255));
+    drawPair(painter, 6,  5,  8, 7, QColor(200,200,200));
 
-    drawPair(painter, 13, 4, 14, 2, 10, 11, 12, Qt::white);
-    drawPair(painter,  8, 9, 10, 11, 12, 13, 5, Qt::white);
+    drawPair(painter, 13, 4, 14, 2, 10, 11, 12,QColor(100, 100, 100));
+    drawPair(painter,  8, 9, 10, 11, 12, 13, 5, QColor(140, 140, 140));
 
     QPolygon pol1, pol2, pol3;
     pol1 << points1[0]<< points1[1]<< points1[2]<< points1[3]<< points1[4]<< points1[5]
@@ -92,6 +92,7 @@ void Cat::paintEvent(QPaintEvent *event)
     pol3 << points2[5]<< points1[7]<< points1[6];
     painter.drawPolygon(pol1);
     painter.drawPolygon(pol2);
+    painter.setBrush(QColor(200,200,200));
     painter.drawPolygon(pol3);
 
 }
