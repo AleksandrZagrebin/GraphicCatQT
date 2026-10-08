@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // Создаём наш виджет как отдельное окно
+    // Создаём наш виджет как отдельное окно(Димас)
     PolygonWidget w;
     w.resize(500, 500);
     w.setWindowTitle("Полигоны");
