@@ -8,7 +8,7 @@ PolygonWidget::PolygonWidget(QWidget *parent)
     setAutoFillBackground(true);
 
     QPalette pal = palette();
-    pal.setColor(QPalette::Window, QColor(245, 245, 245));
+    pal.setColor(QPalette::Window, QColor(100, 100, 100));
     setPalette(pal);
 }
 
